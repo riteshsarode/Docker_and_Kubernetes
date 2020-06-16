@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rsarode/docker_and_kubernetes -f Dockerfile.dev frontend/ 
+  - docker build -t rsarode/docker_and_kubernetes -f drontend/Dockerfile.dev frontend/ 
 
 script:
   - docker run -e CI=true rsarode/docker_and_kubernetes npm run test
